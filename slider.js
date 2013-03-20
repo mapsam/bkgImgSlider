@@ -36,6 +36,7 @@ $(window).load(function(){
 		});
 
 		//delayed fade out after images are loaded, then shows the div again
+		//fade out time is related to the transition time and must stay shorter in order to prevent gaps and flickers
 		$('#front').delay(transitionLength/4).fadeOut(4000).show(); 
 
 		//runs function and loops FOREVER
