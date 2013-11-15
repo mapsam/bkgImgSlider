@@ -12,7 +12,6 @@ Getting it rolling:
 ```HTML
 <script type="text/javascript" src="js/slider.js"></script>
 ```
-
 2. Set up your image space with two `<div>` elements that are overlapping each other. The index.html file has this put together for you above.
 
 3. Set your CSS for those two `<div>` elements so the background images are covering for all browsers (see the [CSS]() file). You may need to update the background positioning depending on your application (i.e. `top` vs. `bottom` vs. `center`).
