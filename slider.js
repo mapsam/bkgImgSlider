@@ -1,12 +1,11 @@
 $(window).load(function(){
 	//global variables	
 	//Your images in an array. This can be as large/small as you like
-	var images = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg']; 
-	var i = 0; //do not change
-	var q = 1; //do not change
-	
-	//Total time image is viewable, inlcluding the transition
-	var transitionLength = 6000 
+	var images = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg'], 
+		i = 0, //do not change
+		q = 1, //do not change
+		transitionLength = 6000, //viewing time + transition
+		url = 'localhost/your_path/images/'; //path
 	
 	//and so it begins (endless loop)
 	function changeBackground() {
@@ -20,7 +19,7 @@ $(window).load(function(){
 			}
 
 			//returns an image string to the css background-image property
-			return 'url(images/' + images[i++] + ')'; 
+			return 'url(' + url + images[i++] + ')'; 
 		});
 		
 		//changes back image to the following image so fade 
@@ -32,7 +31,7 @@ $(window).load(function(){
 			}
 
 			//returns an image string to the css background-image property
-			return 'url(images/' + images[q++] + ')';
+			return 'url(' + url + images[q++] + ')';
 		});
 
 		//delayed fade out after images are loaded, then shows the div again
